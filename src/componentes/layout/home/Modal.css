@@ -1,3 +1,7 @@
+body.modal-open {
+    overflow: hidden;
+}
+
 .overlay {
     /* Capa fija de fondo que cubre toda la pantalla */
     width: 100vw;
@@ -10,6 +14,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 
 
     .modal {
