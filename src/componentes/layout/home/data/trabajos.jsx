@@ -43,7 +43,7 @@ const contenidoStartup = crearContenidoTexto(
 const trabajos = [
 	{
 		id: 1,
-		categoria: 'diseño-web',
+		categoria: 'desarrollo-web',
 		thumb: {
 			url: trabajoAsset('startup-website/1.png'),
 			alt: 'Trabajo 1',
@@ -56,7 +56,7 @@ const trabajos = [
 		),
 		info: {
 			nombre: 'Startup Page',
-			categoria: 'Diseño Web',
+			categoria: 'Desarrollo Web',
 			contenido: contenidoStartup,
 		},
 	},

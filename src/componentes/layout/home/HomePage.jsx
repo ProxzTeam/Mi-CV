@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
 import Hero from "./Hero";
-import Clientes from "./Clientes";
+// import Clientes from "./Clientes";
 import Trabajos from "./Trabajos";
 import AcercaDe from "./AcercaDe";
 import Contacto from "./Contacto";
@@ -25,7 +25,7 @@ const HomePage = () => {
         <div className="contenedor">
             <Header language={language} onLanguageChange={setLanguage} />
             <Hero language={language} />
-            <Clientes language={language} />
+            {/* <Clientes language={language} /> */}
             <Trabajos language={language} />
             <AcercaDe language={language} />
             <Contacto language={language} />

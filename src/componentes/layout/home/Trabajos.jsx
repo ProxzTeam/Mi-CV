@@ -12,8 +12,7 @@ const Trabajos = ({ language = 'en' }) => {
     // Configuracion de los filtros. Si agregas otra categoria, solo extiende esta lista.
     const filtros = [
         { id: 'todos', label: labels.all },
-        { id: 'diseño-web', label: labels.webDesign },
-        { id: 'desarrollo-web', label: labels.webDev },
+        { id: 'desarrollo-web', label: labels.webDesign },
         { id: 'aplicaciones-moviles', label: labels.mobile },
         { id: 'desarrollo-software', label: labels.software },
     ];
