@@ -43,46 +43,69 @@
     .grid {
         /* Mosaico responsive de proyectos */
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px 20px;
+        /* Show 3 larger cards per row on desktop */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px 24px;
+        width: 100%;
+        padding-inline: clamp(8px, 2vw, 16px);
+        box-sizing: border-box;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 992px) {
             & {
-                grid-template-columns: repeat(3, 1fr);
-
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px 16px;
             }
-
-
         }
 
         @media screen and (max-width: 576px) {
             & {
-                grid-template-columns: repeat(2, 1fr);
-
+                grid-template-columns: repeat(1, 1fr);
+                gap: 24px 12px;
+                padding-inline: 12px;
             }
+        }
 
-
+        @media screen and (max-width: 480px) {
+            & {
+                padding-inline: 10px;
+            }
         }
 
         .trabajo {
             /* Tarjeta individual de proyecto */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-width: 0;
+
             .thumb {
                 width: 100%;
-                display: inline-block;
-                border-radius: 5px;
+                display: block;
+                border-radius: 8px;
                 overflow: hidden;
-                margin-bottom: 10px;
+                margin-bottom: 14px;
+                /* larger, consistent thumbnail area */
+                aspect-ratio: 16/10;
+                min-height: 260px;
+
+                @media screen and (max-width: 480px) {
+                    & {
+                        min-height: 220px;
+                    }
+                }
 
                 img {
                     width: 100%;
-                    vertical-align: top;
-                    transform: scale(110%);
-                    transition: 0.5s ease all;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: transform 0.5s ease;
+                    display: block;
                 }
             }
 
-            &:hover img {
-                transform: scale(100%);
+            &:hover .thumb img {
+                transform: scale(1.03);
             }
 
             .info {
@@ -114,8 +137,8 @@
                     cursor: pointer;
                     display: flex;
                     align-items: center;
-                    width: 30px;
-                    height: 30px;
+                    width: 34px;
+                    height: 34px;
 
                     svg {
                         width: 100%;

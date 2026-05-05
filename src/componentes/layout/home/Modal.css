@@ -42,12 +42,14 @@
             }
         }
 
-        .grid {
+            .grid {
             /* Distribucion en dos columnas: imagen + informacion */
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            /* Dar más espacio a la columna de imagen para que se vea más grande */
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
             width: 100%;
+                min-width: 0;
 
             .thumb {
                 min-height: 0;
@@ -55,27 +57,34 @@
                 .slideshow {
                     position: relative;
                     width: 100%;
-                    height: 100%;
-                    min-height: 320px;
-                    border-radius: 10px;
+                    /* Keep a consistent visual ratio for the carousel */
+                    aspect-ratio: 16/9;
+                    width: 100%;
+                    height: auto;
+                    min-height: 420px;
+                    border-radius: 14px;
                     overflow: hidden;
                     background: var(--shade-9);
+                    isolation: isolate;
                 }
 
                 .slides {
                     display: flex;
                     height: 100%;
                     width: 100%;
+                    will-change: transform;
                 }
 
                 .slide {
                     flex: 0 0 100%;
                     height: 100%;
+                    position: relative;
 
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        object-position: center;
                         display: block;
                     }
                 }
@@ -164,6 +173,7 @@
                 grid-template-rows: auto 1fr;
                 max-height: 90vh;
                 gap: 20px;
+                min-width: 0;
 
                 .head {
                     background: #fff;
@@ -194,8 +204,10 @@
                     padding: 20px;
                     border-radius: 10px;
                     overflow: auto;
+                    overflow-x: hidden;
                     color: var(--shade-8);
                     line-height: 30px;
+                    min-width: 0;
 
                     .acciones {
                         /* Franja superior de acciones reutilizando el estilo global de botones. */
@@ -205,23 +217,29 @@
                         margin-bottom: 20px;
 
                         .boton {
-                            background: var(--primario);
+                                    /* Avoid collapsing; let the button size to its content up to a minimum */
+                                    flex: 0 0 auto;
+                                    min-width: 110px;
+                                    background: var(--primario);
                             color: #fff;
                             border: none;
                             cursor: pointer;
-                            max-height: 48px;
-                            border-radius: 100px;
-                            font-weight: 500;
-                            padding: 8px 20px;
+                                    max-height: 44px;
+                                    min-height: 40px;
+                                    border-radius: 100px;
+                                    font-weight: 500;
+                                    padding: 10px 15px;
+                            font-size: 0.95rem;
                             display: flex;
-                            gap: 10px;
+                            justify-content: center;
+                            gap: 8px;
                             align-items: center;
                             transition: .3s ease all;
                             text-decoration: none;
 
                             svg {
-                                width: 16px;
-                                height: 16px;
+                                width: 15px;
+                                height: 15px;
                             }
 
                             &:hover {
@@ -243,6 +261,7 @@
 
                     p {
                         margin-bottom: 20px;
+                        overflow-wrap: anywhere;
 
                     }
 
@@ -255,25 +274,41 @@
 
         @media screen and (max-width: 768px) {
             & {
-                width: 80vw;
-                max-width: 400px;
-                max-height: 90vh;
+                width: min(94vw, 430px);
+                max-width: 430px;
+                max-height: calc(100vh - 24px);
                 overflow: auto;
+                overflow-x: hidden;
 
                 .grid {
                     grid-template-columns: 1fr;
+                    gap: 14px;
 
                     .thumb {
                         .slideshow {
-                            min-height: 240px;
+                            min-height: 210px;
                         }
                     }
 
-                    .body {
-                        .acciones {
-                            .boton {
-                                width: 100%;
-                                min-height: 40px;
+                    .info {
+                        .head,
+                        .body {
+                            padding: 16px;
+                        }
+
+                        .body {
+                            line-height: 1.65;
+
+                            .acciones {
+                                flex-direction: column;
+                                gap: 8px;
+
+                                .boton {
+                                    width: min(220px, 100%);
+                                    min-width: 0;
+                                    min-height: 40px;
+                                    margin-inline: auto;
+                                }
                             }
                         }
                     }

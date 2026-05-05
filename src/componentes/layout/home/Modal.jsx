@@ -5,9 +5,24 @@ import { CloseIcon, GitIcon, RightArrowIcon, RocketIcon } from './icons/SVGIcons
 const AUTO_SLIDE_DELAY = 5000;
 const SLIDE_TRANSITION = 300;
 
+const normalizarGaleria = (trabajo) => {
+    const baseGaleria = trabajo.galeria?.length ? trabajo.galeria : [trabajo.thumb];
+
+    // If the project has at least 3 images return all of them.
+    // If it has fewer than 3, duplicate entries until there are 3.
+    if (baseGaleria.length >= 3) return baseGaleria;
+
+    const imagenes = baseGaleria.slice();
+    while (imagenes.length < 3) {
+        imagenes.push(baseGaleria[imagenes.length % baseGaleria.length]);
+    }
+
+    return imagenes;
+};
+
 // Muestra el detalle de un trabajo seleccionado y permite cerrar el modal.
 const Modal = ({ closeModal, trabajo }) => {
-    const imagenes = trabajo.galeria?.length ? trabajo.galeria : [trabajo.thumb];
+    const imagenes = normalizarGaleria(trabajo);
     const [slideActual, setSlideActual] = useState(0);
     const [reiniciosAutoplay, setReiniciosAutoplay] = useState(0);
 
@@ -64,7 +79,7 @@ const Modal = ({ closeModal, trabajo }) => {
                             <div
                                 className="slides"
                                 style={{
-                                    transform: `translateX(-${slideActual * 100}%)`,
+                                    transform: `translate3d(-${slideActual * 100}%, 0, 0)`,
                                     transition: `transform ${SLIDE_TRANSITION}ms ease-out`,
                                 }}
                             >

@@ -34,9 +34,9 @@ const crearContenido = (bloques) => (
 const trabajoAsset = (fileName) => `/assets/trabajos/${fileName}`;
 
 const contenidoStartup = crearContenidoTexto(
-	'Startup Page es una landing pensada para presentar una propuesta de valor con claridad y llevar al usuario hacia una accion concreta.',
-	'La estructura prioriza jerarquia visual, lectura rapida y un recorrido simple entre hero, beneficios y secciones de soporte.',
-	'El resultado es una pagina liviana, responsiva y orientada a conversion, con foco en una presentacion limpia del producto.'
+	'Startup Page es una landing page conceptual desarrollada para demostrar habilidades en diseño UI/UX y desarrollo frontend.',
+	'El proyecto se enfoca en una estructura clara y jerárquica que guía al usuario a través de una experiencia intuitiva, destacando la propuesta de valor, las características principales y los llamados a la acción.',
+	'Incluye diseño responsive, soporte para modo claro y oscuro, soporte para cambiar entre los idiomas de ingles/español y una interfaz moderna orientada a rendimiento y facilidad de uso.'
 );
 
 const contenidoQuantumSoft = crearContenidoTexto(
@@ -111,10 +111,15 @@ const trabajos = [
 		id: 1,
 		categoria: 'diseño-web',
 		thumb: {
-			url: trabajoAsset('1.png'),
+			url: trabajoAsset('startup-website/1.png'),
 			alt: 'Trabajo 1',
 		},
-		galeria: crearGaleria(trabajoAsset('1.png'), trabajoAsset('13.png'), trabajoAsset('14.png')),
+		galeria: crearGaleria(
+			trabajoAsset('startup-website/1.png'),
+			trabajoAsset('startup-website/2.png'),
+			trabajoAsset('startup-website/3.png'),
+			trabajoAsset('startup-website/4.png'),
+		),
 		info: {
 			nombre: 'Startup Page',
 			categoria: 'Diseño Web',
