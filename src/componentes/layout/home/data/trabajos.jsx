@@ -114,7 +114,7 @@ const trabajos = [
 			url: trabajoAsset('1.png'),
 			alt: 'Trabajo 1',
 		},
-		galeria: crearGaleria(trabajoAsset('1.png'), trabajoAsset('13.png')),
+		galeria: crearGaleria(trabajoAsset('1.png'), trabajoAsset('13.png'), trabajoAsset('14.png')),
 		info: {
 			nombre: 'Startup Page',
 			categoria: 'Diseño Web',
