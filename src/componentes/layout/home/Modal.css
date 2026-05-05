@@ -82,6 +82,9 @@ body.modal-open {
                     background: var(--shade-9);
                     isolation: isolate;
                 }
+                .slideshow.vertical .slide img {
+                    object-fit: contain;
+                }
 
                 .slides {
                     display: flex;
@@ -308,6 +311,11 @@ body.modal-open {
                         .slideshow {
                             min-height: 210px;
                         }
+
+                        .slideshow.vertical {
+                            width: 100%;
+                            height: min(70vh, 620px);
+                        }
                     }
 
                     .info {
@@ -334,7 +342,6 @@ body.modal-open {
                     }
                 }
             }
-
         }
     }
 }

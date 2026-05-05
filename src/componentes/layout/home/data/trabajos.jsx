@@ -39,6 +39,12 @@ const contenidoStartup = crearContenidoTexto(
 	'Incluye diseño responsive, soporte para modo claro y oscuro, soporte para cambiar entre los idiomas de ingles/español y una interfaz moderna orientada a rendimiento y facilidad de uso.'
 );
 
+const contenidoFitPlanner = crearContenidoTexto(
+	'Startup Page es una landing page conceptual desarrollada para demostrar habilidades en diseño UI/UX y desarrollo frontend.',
+	'El proyecto se enfoca en una estructura clara y jerárquica que guía al usuario a través de una experiencia intuitiva, destacando la propuesta de valor, las características principales y los llamados a la acción.',
+	'Incluye diseño responsive, soporte para modo claro y oscuro, soporte para cambiar entre los idiomas de ingles/español y una interfaz moderna orientada a rendimiento y facilidad de uso.'
+);
+
 // Cada objeto representa una tarjeta del grid y su contenido detallado en el modal.
 const trabajos = [
 	{
@@ -58,6 +64,29 @@ const trabajos = [
 			nombre: 'Startup Page',
 			categoria: 'Desarrollo Web',
 			contenido: contenidoStartup,
+		},
+	},
+	{
+		id: 2,
+		categoria: 'aplicaciones-moviles',
+		thumb: {
+			url: trabajoAsset('fitplanner-app/1.png'),
+			alt: 'Trabajo 2',
+		},
+		galeria: crearGaleria(
+			trabajoAsset('fitplanner-app/1.png'),
+			trabajoAsset('fitplanner-app/2.png'),
+			trabajoAsset('fitplanner-app/3.png'),
+			trabajoAsset('fitplanner-app/4.png'),
+			trabajoAsset('fitplanner-app/5.png'),
+			trabajoAsset('fitplanner-app/7.png'),
+
+		),
+		formatoGaleria: 'vertical',
+		info: {
+			nombre: 'FitPlanner App',
+			categoria: 'Aplicaciones Móviles',
+			contenido: contenidoFitPlanner,
 		},
 	},
 ];

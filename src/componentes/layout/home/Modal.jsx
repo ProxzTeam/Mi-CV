@@ -23,6 +23,7 @@ const normalizarGaleria = (trabajo) => {
 // Muestra el detalle de un trabajo seleccionado y permite cerrar el modal.
 const Modal = ({ closeModal, trabajo }) => {
     const imagenes = normalizarGaleria(trabajo);
+    const esGaleriaVertical = trabajo.formatoGaleria === 'vertical';
     const [slideActual, setSlideActual] = useState(0);
     const [reiniciosAutoplay, setReiniciosAutoplay] = useState(0);
 
@@ -98,7 +99,10 @@ const Modal = ({ closeModal, trabajo }) => {
                 {/* Grid con miniatura y descripcion del proyecto */}
                 <div className="grid">
                     <div className="thumb">
-                        <div className="slideshow" aria-label={`Galería de ${trabajo.info.nombre}`}>
+                        <div
+                            className={`slideshow${esGaleriaVertical ? ' vertical' : ''}`}
+                            aria-label={`Galería de ${trabajo.info.nombre}`}
+                        >
                             <div
                                 className="slides"
                                 style={{
