@@ -26,7 +26,6 @@ body.modal-open {
         display: flex;
         justify-content: center;
         position: relative;
-        overflow: auto;
         margin: 16px;
 
         .boton-cerrar {
@@ -59,9 +58,9 @@ body.modal-open {
         }
 
             .grid {
-            /* Distribucion vertical: imagen arriba, info abajo */
-            display: flex;
-            flex-direction: column;
+            /* Distribucion: imagen a izquierda (2fr), info a derecha (1fr) */
+            display: grid;
+            grid-template-columns: 2fr 1fr;
             gap: 16px;
             width: 100%;
             padding: 0;
@@ -232,7 +231,7 @@ body.modal-open {
                         display: flex;
                         gap: 12px;
                         flex-wrap: wrap;
-                        margin-bottom: 16px;
+                        margin-top: 16px;
                         justify-content: center;
 
                         .boton {
@@ -301,7 +300,8 @@ body.modal-open {
                 margin: 16px;
 
                 .grid {
-                    grid-template-columns: 1fr;
+                    display: flex;
+                    flex-direction: column;
                     gap: 14px;
 
                     .thumb {
