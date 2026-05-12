@@ -65,6 +65,8 @@ const trabajos = [
 			categoria: 'Desarrollo Web',
 			contenido: contenidoStartup,
 		},
+		demoUrl: 'https://example.com/startup-page',
+		githubUrl: 'https://github.com/danilorivera04/startup-page',
 	},
 	{
 		id: 2,
@@ -88,6 +90,7 @@ const trabajos = [
 			categoria: 'Aplicaciones Móviles',
 			contenido: contenidoFitPlanner,
 		},
+		githubUrl: 'https://github.com/danilorivera04/fitplanner-app',
 	},
 ];
 
