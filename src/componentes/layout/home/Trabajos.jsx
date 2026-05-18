@@ -14,7 +14,6 @@ const Trabajos = ({ language = 'en' }) => {
         { id: 'todos', label: labels.all },
         { id: 'desarrollo-web', label: labels.webDesign },
         { id: 'aplicaciones-moviles', label: labels.mobile },
-        { id: 'desarrollo-software', label: labels.software },
     ];
 
     // Categoria activa del filtro.
@@ -63,7 +62,7 @@ const Trabajos = ({ language = 'en' }) => {
                         <a href="#" className="nombre" onClick={(e) => openModal(e, trabajo.id)}>
                             {trabajo.info.nombre}
                         </a>
-                        <p className="categoria">{trabajo.info.categoria}</p>
+                        
                     </div>
                     <a href="#" className="btn-ir" onClick={(e) => openModal(e, trabajo.id)}>
                         <ArrowCircleIcon width={16} height={16} />

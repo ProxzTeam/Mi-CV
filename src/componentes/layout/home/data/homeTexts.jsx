@@ -22,7 +22,7 @@ const homeTexts = {
         },
         trabajos: {
             all: "All",
-            webDesign: "Web Design",
+            webDesign: "Web Development",
             webDev: "Web Development",
             mobile: "Mobile Apps",
             software: "Software Development",
@@ -78,9 +78,9 @@ const homeTexts = {
         },
         trabajos: {
             all: "Todos",
-            webDesign: "Diseño Web",
+            webDesign: "Desarrollo Web",
             webDev: "Desarrollo Web",
-            mobile: "Aplicaciones Moviles",
+            mobile: "Aplicaciones Móviles",
             software: "Desarrollo de Software",
             title: "Mis Trabajos",
             subtitle: "Estos son algunos de los proyectos en los que he trabajado",
