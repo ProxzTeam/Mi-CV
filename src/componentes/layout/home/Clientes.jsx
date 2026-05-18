@@ -5,11 +5,11 @@ import { getHomeTexts } from "./data/homeTexts";
 const Clientes = ({ language = "en" }) => {
     const t = getHomeTexts(language).clientes;
     const logos = [
-        { src: "/assets/logos/Recharge.svg", alt: "Logo de Recharge" },
-        { src: "/assets/logos/Volume.svg", alt: "Logo de Volume" },
-        { src: "/assets/logos/Umbrella.svg", alt: "Logo de Umbrella" },
-        { src: "/assets/logos/Waveless.svg", alt: "Logo de Waveless" },
-        { src: "/assets/logos/Vision.svg", alt: "Logo de Vision" },
+        { src: "/assets/imagenes/logos/Recharge.svg", alt: "Logo de Recharge" },
+        { src: "/assets/imagenes/logos/Volume.svg", alt: "Logo de Volume" },
+        { src: "/assets/imagenes/logos/Umbrella.svg", alt: "Logo de Umbrella" },
+        { src: "/assets/imagenes/logos/Waveless.svg", alt: "Logo de Waveless" },
+        { src: "/assets/imagenes/logos/Vision.svg", alt: "Logo de Vision" },
     ];
 
     return (

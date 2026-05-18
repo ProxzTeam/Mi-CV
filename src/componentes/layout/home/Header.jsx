@@ -11,7 +11,7 @@ const Header = ({ language = "en", onLanguageChange }) => {
       <header className="header">
         {/* Identidad visual (logo + nombre profesional) */}
         <div className="logo">
-          <img className="logo-rrad" src="/logo.png"
+          <img className="logo-rrad" src="/assets/imagenes/logo.png"
             alt="Logo de la marca" />
           <div className="logo-texto">
             <h2 className="titulo">Danilo Rivera</h2>

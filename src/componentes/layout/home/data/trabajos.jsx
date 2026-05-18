@@ -31,7 +31,7 @@ const crearContenido = (bloques) => (
 	</>
 );
 
-const trabajoAsset = (fileName) => `/assets/trabajos/${fileName}`;
+const trabajoAsset = (fileName) => `/assets/imagenes/trabajos/${fileName}`;
 
 const contenidoStartup = crearContenidoTexto(
 	'Startup Page es una landing page conceptual desarrollada para demostrar habilidades en diseño UI/UX y desarrollo frontend.',

@@ -38,8 +38,8 @@ const homeTexts = {
                 "I specialize in web and mobile application development, combining logic, structure, and strong attention to detail in user experience. I am motivated to build projects that not only work well, but also look professional and convey identity.",
             cta: "Send me a message",
             photos: [
-                { src: "/assets/yo.png", alt: "Portrait of Danilo" },
-                { src: "/assets/trabajos/14.png", alt: "Project preview" },
+                { src: "/assets/imagenes/yo.png", alt: "Portrait of Danilo" },
+                { src: "/assets/imagenes/trabajos/14.png", alt: "Project preview" },
             ],
         },
         contacto: {
@@ -94,8 +94,8 @@ const homeTexts = {
                 "Me especializo en el desarrollo de aplicaciones web y móviles, combinando lógica, estructura y una fuerte atención al detalle en la experiencia de usuario. Me motiva construir proyectos que no solo funcionen bien, sino que también se vean profesionales y transmitan identidad.",
             cta: "Mandame un mensaje",
             photos: [
-                { src: "/assets/yo.png", alt: "Retrato de Danilo" },
-                { src: "/assets/trabajos/14.png", alt: "Vista previa de un proyecto" },
+                { src: "/assets/imagenes/yo.png", alt: "Retrato de Danilo" },
+                { src: "/assets/imagenes/trabajos/14.png", alt: "Vista previa de un proyecto" },
             ],
         },
         contacto: {
