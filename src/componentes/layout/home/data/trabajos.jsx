@@ -65,7 +65,7 @@ const trabajos = [
 			categoria: 'Desarrollo Web',
 			contenido: contenidoStartup,
 		},
-		demoUrl: 'https://example.com/startup-page',
+		demoUrl: 'https://startup-page-plum.vercel.app/',
 		githubUrl: 'https://github.com/danilorivera04/startup-page',
 	},
 	{
