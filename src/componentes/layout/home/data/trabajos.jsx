@@ -45,6 +45,14 @@ const contenidoFitPlanner = crearContenidoTexto(
 	'Incluye diseño responsive, soporte para modo claro y oscuro, soporte para cambiar entre los idiomas de ingles/español y una interfaz moderna orientada a rendimiento y facilidad de uso.'
 );
 
+const contenidoQuinielasEntreCuates = crearContenidoTexto(
+	'Pronósticos entre Cuates es una plataforma para organizar quinielas de fútbol, desarrollada para digitalizar el registro de participantes, la captura de pronósticos y el seguimiento de resultados desde una experiencia clara y accesible.',
+	'La aplicación permite seleccionar resultados, elegir modalidades con distintos límites de dobles, generar automáticamente todas las combinaciones y registrar las jugadas con un folio único. Los participantes pueden consultar sus quinielas, revisar tablas de posiciones y visualizar sus aciertos conforme se actualizan los marcadores.',
+	'Incluye un panel administrativo protegido para gestionar torneos, jornadas, partidos, registros, pagos y premios. También incorpora importación de encuentros de Liga MX, exportación de reportes en PDF y CSV, envío mediante WhatsApp y publicación programada de jornadas.',
+	'El proyecto fue desarrollado con React, TypeScript, Vite y Supabase, utilizando autenticación por roles, PostgreSQL, funciones transaccionales y políticas de seguridad a nivel de base de datos. Su interfaz responsive está optimizada para computadoras y dispositivos móviles.'
+
+);
+
 // Cada objeto representa una tarjeta del grid y su contenido detallado en el modal.
 const trabajos = [
 	{
@@ -91,6 +99,31 @@ const trabajos = [
 			contenido: contenidoFitPlanner,
 		},
 		githubUrl: 'https://github.com/danilorivera04/fitplanner-app',
+	},
+	{
+		id: 3,
+		categoria: 'desarrollo-web',
+		thumb: {
+			url: trabajoAsset('pronosticos-entre-cuates/6.png'),
+			alt: 'Trabajo 3',
+		},
+		galeria: crearGaleria(
+			trabajoAsset('pronosticos-entre-cuates/1.png'),
+			trabajoAsset('pronosticos-entre-cuates/2.png'),
+			trabajoAsset('pronosticos-entre-cuates/3.png'),
+			trabajoAsset('pronosticos-entre-cuates/4.png'),
+			trabajoAsset('pronosticos-entre-cuates/5.png'),
+			
+
+		),
+		formatoGaleria: 'vertical',
+		info: {
+			nombre: 'Quinielas Entre Cuates',
+			categoria: 'Desarrollo Web',
+			contenido: contenidoQuinielasEntreCuates,
+		},
+		demoUrl: 'https://www.pronosticosentrecuates.com/',
+		demoLabel: 'Ver pagina',
 	},
 ];
 
